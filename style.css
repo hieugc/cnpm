@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*---------------------nav------------------*/
+.contain{
+    max-width: 1900px;
+    margin: 0 auto;
+    min-width: 550px;
+    overflow: hidden;
+}
+.nav{
+    display: flex;
+    background-color: #534d64;
+    text-align: center;
+    color: white;
+    height: 50px;
+    font-size: 18px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.nav .func{
+    flex: 65%;
+    display: flex;
+}
+.nav .func div{
+    flex: 20%;
+    max-width: 120px;
+    height: 100%;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.nav .signout{
+    flex: 35%;
+    text-align: right;
+    padding-right: 10px;
+    margin: auto 0;
+    cursor: pointer;
+}
+.nav .func div:hover{
+    background-color: #a494d3;
+    border-bottom: 3px solid #373244;
+}
+.nav .signout:hover{
+    font-size: 26px;
+}
+/*---------------------main-------------------*/
+.main{
+    margin-top: 2px;
+    min-height: 200px;
+    border: 1px solid #373244;
+    max-width: 100%;
+}
+.main .title{
+    font-size: 26px;
+    text-align: center;
+    height: 50px;
+}
+.main > div{
+    max-width: 100%;
+}
+/*---------------------main revenue----------------------------------*/
+.main .revenue{
+    display: none;
+}
+/*---------------------main revenue input-------------------*/
+.main .revenue .input{
+    display: flex;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #373244;
+    border-radius: 3px;
+    max-width: 500px;
+}
+.main .revenue .input .part-out{
+    flex: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .revenue .input .part-out .part-in{
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+.main .revenue .input .part-out .part-in .label{
+    flex: 30%;
+}
+.main .revenue .input .part-out .part-in input{
+    display: block;
+    flex: 70%;
+}
+.main .revenue .input .submit{
+    flex: 30%;
+    cursor: pointer;
+}
+.main .revenue .input .submit .button{
+    color: white;
+    text-align: center;
+    padding: 6px;
+    background-color: #373244;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+/*---------------------main revenue View-------------------*/
+.main .revenue .view{
+    min-height: 100px;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #373244;
+}
+/*---------------------main revenue View name-------------------*/
+.main .revenue .view .name{
+    display: flex;
+    font-size: 18px;
+}
+.main .revenue .view .name div{
+    flex: 20%;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #373244;
+}
+/*---------------------main revenue View table-------------------*/
+.main .revenue .view .table{
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox 64 */
+    min-height: 500px;
+    max-height: 800px;
+    font-size: 14px;
+}
+.main .revenue .view .table::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.main .revenue .view .table .value{
+    display: flex;
+    min-height: 20px;
+}
+.main .revenue .view .value div{
+    content: "example";
+    flex: 20%;
+    text-align: center;
+    padding: 1px;
+    border: 1px solid #37324486;
+}
+/*---------------------main revenue View foter-------------------*/
+.main .revenue .footer{
+    display: flex;
+    margin: 10px 0;
+    background-color: #271e3db9;
+    color: white;
+    font-size: 18px;
+    min-height: 50px;
+}
+.main .revenue .footer .control{
+    flex: 40%;
+    display: flex;
+    align-items: center;
+}
+.main .revenue .footer .control div{
+    flex: 20%;
+    max-width: 120px;
+    padding: 5px 15px;
+    margin-left: 20px;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 1px 1px 5px #282531;
+    background-color: #271e3d;
+    cursor: pointer;
+}
+.main .revenue .footer .total{
+    flex: 60%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.main .revenue .footer .total .label{
+    max-width: 40%;
+    font-weight: bold;
+}
+.main .revenue .footer .total .value{
+    margin-left: 5px;
+}
+/*---------------------main end revenue----------------------------------*/
+
+/*---------------------main Menu----------------------------------*/
+.main .menu{
+    display: none;
+}
+/*---------------------main Menu add button----------------------------------*/
+.main .behavior .add-food{
+    margin: 10px;
+    max-width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.719);
+    box-shadow: 1px 1px 5px #352952;
+    background-color: #352952;
+    cursor: pointer;
+}
+/*---------------------main Menu form input----------------------------------*/
+.main .behavior > .input{
+    border: 1px dotted #352952;
+    margin: 10px;
+    max-width: 500px;
+    display: none;
+}
+.main .behavior > .input .img{
+    margin: 7px 0;
+    min-height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+.main .behavior > .input .info{
+    margin-top: 5px;
+    border-bottom: 2px solid #352952;
+}
+.main .behavior > .input .info div{
+    display: flex;
+    min-height: 22px;
+    margin: 3px;
+}
+.main .behavior > .input .info div .label{
+    width: 25%;
+    max-width: 130px;
+}
+.main .behavior > .input .info div .value{
+    width: 75%;
+    border: 1px solid rgba(75, 54, 54, 0.322);
+}
+.main .behavior > .input .info div .value *{
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 15px;
+}
+.main .behavior > .input .info div .value textarea{
+    min-width: 100%;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 300px;
+}
+.main .behavior > .input .bot{
+    display: flex;
+}
+.main  .behavior > .input .bot > div{
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.719);
+    box-shadow: 1px 1px 5px #352952;
+    font-size: 18px;
+    background-color: #946feb;
+    cursor: pointer;
+}
+/*---------------------main Menu list----------------------------------*/
+.main .list{
+    min-height: 350px;
+    max-height: 1300px;
+    margin: 5px 30px;
+    overflow-y: scroll;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+}
+#scroll-bar::-webkit-scrollbar{
+    width: 10px;
+}
+#scroll-bar::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+#scroll-bar::-webkit-scrollbar-thumb{
+    background: #352952;
+    border-radius: 10px;
+}
+#scroll-bar::-webkit-scrollbar-thumb:hover {
+    background: #73619e;
+}
+.main .list > .node{
+    width: 70%;
+    margin: 10px;
+    border: 2px solid #352952;
+    box-shadow: 1px 1px 5px #352952;
+    max-width: 325px;
+}
+.main .list .node .img{
+    margin: 0 2px;
+    min-height: 200px;
+    border-radius: 5px;
+    background-color: #352952;
+}
+.main .list .node .info{
+    margin-top: 5px;
+    border-bottom: 2px solid #352952;
+}
+.main .list .node .info div{
+    display: flex;
+    min-height: 22px;
+    text-align: center;
+    margin: 3px;
+}
+.main .list .node .info div .label{
+    flex: 25%;
+    font-size: 18px;
+    text-align: left;
+}
+.main .list .node .info div .value{
+    flex: 75%;
+    border: 1px solid rgba(75, 54, 54, 0.322);
+}
+.main .list .node .info div .value input{
+    min-width: 100%;
+    display: none;
+}
+.main .list .node .info div .value textarea{
+    min-width: 100%;
+    max-width: 221px;
+    min-height: 100px;  
+    max-height: 225px;
+    display: none;
+}
+.main .list .node .info .desc{
+    min-height: 100px;
+    max-height: 300px;
+}
+.main .list .node .control{
+    display: flex;
+    margin: 5px;
+    min-height: 40px;
+}
+.main .list .node .control > div{
+    flex: 30%;
+    max-width: 40%;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.719);
+    box-shadow: 1px 1px 5px #352952;
+    font-size: 18px;
+    background-color: #946feb;
+    cursor: pointer;
+}
+/*---------------------main end Menu----------------------------------*/
+/*---------------------main Employee----------------------------------*/
+.main .employee{
+}
+.main .behavior .add-employee{
+    max-width: 150px;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.719);
+    box-shadow: 1px 1px 5px #352952;
+    background-color: #352952;
+    cursor: pointer;
+}
+/*---------------------main Menu list----------------------------------*/
+.main .employee .list .node .info div .label{
+    flex: 30%;
+}
+.main .employee .list .node .info div .value{
+    flex: 70%;
+}
+/*---------------------main end Employee---------------------------------*/
+

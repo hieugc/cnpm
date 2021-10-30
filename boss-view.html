@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Info page-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Manager">
+        <meta name="author" content="Phạm Minh Hiếu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Manager page</title>
+
+        <!-- link css file -->
+	    <link href="style.css" rel="stylesheet" type="text/css" />
+        <!-- link icon -->
+        <script src="https://kit.fontawesome.com/320d0ac08e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="contain">
+            <!-- navagation -->
+            <div class="nav">
+                <div class="func">
+                    <div>Doanh thu</div>
+                    <div>Thực đơn</div>
+                    <div>Nhân sự</div>
+                </div>
+                <div class="signout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i>Sign out</div>
+            </div>
+            <!-- navagation -->
+            <!-- main View -->
+            <div class="main">
+
+                <!-- revenue -->
+                <div class="revenue">
+                    <div class="input">
+                        <div class="part-out">
+                            <div class="part-in">
+                                <div class="label">Từ ngày:</div><input type="date">
+                            </div>
+                            <div class="part-in">
+                                <div class="label">Đến ngày:</div><input type="date">
+                            </div>
+                        </div>
+                        <div class="submit"><div class="button">Tìm kiếm</div></div>
+                    </div>
+                    <div class="view">
+                        <div class="title">Doanh số cửa hàng</div>
+                        <div class="name">
+                            <div>Ngày</div>
+                            <div>Mã hóa đơn</div>
+                            <div>Tổng tiền</div>
+                            <div>Tiền tip</div>
+                            <div>ID nhân viên</div>
+                        </div>
+                        <div class="table">
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                            <div class="value"><div></div><div></div><div></div><div></div><div></div></div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="control">
+                            <div>Tuần</div>
+                            <div>Tháng</div>
+                        </div>
+                        <div class="total">
+                            <div class="label">Tổng cộng: </div>
+                            <div class="value">123456789</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- revenue -->
+
+                <!-- menu -->
+                <div class="menu">
+                    <div class="behavior">
+                        <div class="add-food" id="add-food"><i class="fas fa-plus-circle"></i> Thêm món</div>
+                        <div class="input" id="input-food">
+                            <div class="title">Thông tin món ăn</div>
+                            <div class="info">
+                                <div class="name">
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><input type="text" placeholder="name...."></div>
+                                </div>
+                                <div class="type">
+                                    <div class="label">Phân loại:</div>
+                                    <div class="value">
+                                        <input type="text" list="datatype">
+                                        <datalist id="datatype">
+                                            <option value="Cơm">
+                                            <option value="Cơm">
+                                            <option value="Cơm">
+                                            <option value="Cơm">
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <div class="label">Giá:</div>
+                                    <div class="value"><input type="number" placeholder="VNG"></div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                    <div class="value"><textarea placeholder="Nguyên liệu...."></textarea></div>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="img"><p>Chọn ảnh <i class="fas fa-upload"></i></p></div>
+                                <div class="done"><p>Xong</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="title">Danh sách món ăn</div>
+                    <div class="list" id="scroll-bar">
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div><div class="label">Tên:</div><div class="value"><input type="text"> <pre class="valuename"></pre></div> </div>
+                                <div><div class="label">Giá:</div><div class="value"><input type="number"><pre class="valueprice"></pre></div></div>
+                                <div class="desc"><div class="label">Mô tả:</div><div class="value"><textarea></textarea><pre class="valuedesc"></pre></div></div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value">
+                                      <input type="text">
+                                      <pre class="valuename"></pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Giá:</div>
+                                    <div class="value">
+                                      <input type="number">
+                                      <pre class="valueprice"></pre>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="label">Mô tả:</div>
+                                      <div class="value">
+                                        <textarea></textarea>
+                                        <pre class="valuedesc"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div><div class="label">Tên:</div><div class="value"><input type="text"> <pre class="valuename"></pre></div> </div>
+                                <div><div class="label">Giá:</div><div class="value"><input type="number"><pre class="valueprice"></pre></div></div>
+                                <div class="desc"><div class="label">Mô tả:</div><div class="value"><textarea></textarea><pre class="valuedesc"></pre></div></div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- menu -->
+
+                <!-- employee -->
+                <div class="employee">
+                    <div class="behavior">
+                        <div class="add-employee" id="add-employee"><i class="fas fa-plus-circle"></i> Thêm nhân viên</div>
+                        <div class="input" id="input-employee">
+                            <div class="title">Thông tin nhân viên</div>
+                            <div class="info">
+                                <div class="name">
+                                    <div class="label">Họ và Tên:</div>
+                                    <div class="value"><input type="text" placeholder="Họ và tên...."></div>
+                                </div>
+                                <div class="birthday">
+                                    <div class="label">Năm sinh:</div>
+                                    <div class="value"><input type="date"></div>
+                                </div>
+                                <div class="CMND">
+                                    <div class="label">CMND/CCCD:</div>
+                                    <div class="value"><input type="text" placeholder="Điền CMND hoặc CCCD.."></div>
+                                </div>
+                                <div class="phone">
+                                    <div class="label">Số điện thoại:</div>
+                                    <div class="value"><input type="text"></div>
+                                </div>
+                                <div class="type">
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value">
+                                        <select>
+                                            <option>Phục vụ</option>
+                                            <option>Bộ phận bếp</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="img"><p>Chọn ảnh <i class="fas fa-upload"></i></p></div>
+                                <div class="done"><p>Xong</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="title">Danh sách nhân viên</div>
+                    <div class="list" id="scroll-bar">
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                        <div class="node">
+                            <div class="img">img</div>
+                            <div class="info">
+                                <div>
+                                    <div class="label">Tên:</div>
+                                    <div class="value"><pre class="valuename"></pre></div> 
+                                </div>
+                                <div>
+                                    <div class="label">Chức vụ:</div>
+                                    <div class="value"><input type="text"><pre class="valueoffice"></pre></div>
+                                </div>
+                                <div>
+                                    <div class="label">SĐT:</div>
+                                    <div class="value"><input type="text"><pre class="valuephone"></pre></div>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="edit"><i class="far fa-edit"></i> Chỉnh sửa</div>
+                                <div class="remove"><i class="fas fa-trash-alt"></i> Xóa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- employee -->
+
+            </div>
+            <!-- main View -->
+            
+        </div>
+        <script src="./myscript.js"></script>
+    </body>
+</html>
